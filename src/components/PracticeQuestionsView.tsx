@@ -516,7 +516,7 @@ export const PracticeQuestionsView: React.FC<PracticeQuestionsViewProps> = ({
                   <div className="space-y-4">
                     <div className="p-3 sm:p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center">
                       <img
-                        src={q.fullQuestionImage}
+                        src={q.fullQuestionImage.startsWith('/') ? '.' + q.fullQuestionImage : q.fullQuestionImage}
                         alt={`#${q.questionNumber} ${q.title}`}
                         className="w-full max-w-2xl h-auto rounded-xl object-contain border border-slate-100 dark:border-slate-800"
                       />
