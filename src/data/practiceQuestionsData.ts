@@ -10,6 +10,7 @@ export interface PracticeQuestion {
   questionNumber: number;
   title: string;
   topic: string;
+  fullQuestionImage?: string; // Sadece PNG Görseli Modu (v2 için)
   leadText?: string;
   quoteBlock?: string;
   svgDiagram?: string; // Vektörel SVG Şekil ve Grafik Çizimi
@@ -1389,6 +1390,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   // --- TÜRKÇE (7 Soru) ---
   {
     id: 'deneme1v2-tr-1',
+    fullQuestionImage: '/assets/aistudio/Soru_01_52db1b2d-2f8f-4f77-aee7-2e8e5a6ccf1e_a75dce7b-499d-47a3-9aa8-bbdbb644e264_e23d209c.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1415,6 +1417,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-tr-2',
+    fullQuestionImage: '/assets/aistudio/Soru_01_52db1b2d-2f8f-4f77-aee7-2e8e5a6ccf1e_a75dce7b-499d-47a3-9aa8-bbdbb644e264__1__e23d209c.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1441,6 +1444,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-tr-3',
+    fullQuestionImage: '/assets/aistudio/Soru_04_a53b1034-5cde-476b-b32e-eaad1eaeab22_4109a36b-f5db-4aec-ba4e-f9975dd55e54_284a1734.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1467,6 +1471,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-tr-4',
+    fullQuestionImage: '/assets/aistudio/Soru_13_20587e49-852f-48ed-89a1-39a59264eb29_2cb72f92-8bca-4afd-a498-c487c24bb92b_347826b4.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1493,6 +1498,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-tr-5',
+    fullQuestionImage: '/assets/aistudio/Soru_11_b1b5cce3-5f39-474b-8862-99e828d53967_c3a774c5-e6b3-4ce6-9206-5f79522e2d28_0f1f20ae.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1519,6 +1525,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-tr-6',
+    fullQuestionImage: '/assets/aistudio/Soru_10_805c8396-4bc0-43a3-a24f-035bb3582803_1c21ffbe-35cc-41e7-a0fa-c6381ebd284d_0a9a6f4c.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1545,6 +1552,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-tr-7',
+    fullQuestionImage: '/assets/aistudio/Soru_03_3f4c2de4-47b4-4a60-9b99-d24800c22076_b83257b2-48d2-4c19-91a2-cfbc62edad71_30959116.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1573,6 +1581,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   // --- MATEMATİK (4 Soru) ---
   {
     id: 'deneme1v2-math-1',
+    fullQuestionImage: '/assets/aistudio/Soru_51_3b9ad373-f84c-449c-8ecb-1ffe89ae8cd1_421f8c5f-f6d8-49e7-b0c6-19253d7fc265_351ee5eb.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1600,6 +1609,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-math-2',
+    fullQuestionImage: '/assets/aistudio/Soru_62_1275f80a-c3ed-448d-b5f6-9497ebd75f22_4b1fa79d-4836-42a2-8052-0e4429cef38d_3e444cb0.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1626,6 +1636,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-math-3',
+    fullQuestionImage: '/assets/aistudio/Soru_65_a488a55c-94ed-46f0-bcc3-411c557de397_b821f9c8-a015-4d6e-9587-32004de09057_b19351ea.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1653,6 +1664,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-math-4',
+    fullQuestionImage: '/assets/aistudio/Soru_70_07994af8-6fe2-443b-861b-cfa444224f53_a3c98b06-adb1-46e3-90ee-3920b6d8abd6_351a5667.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1682,6 +1694,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   // --- FEN BİLİMLERİ (4 Soru) ---
   {
     id: 'deneme1v2-fen-1',
+    fullQuestionImage: '/assets/aistudio/Soru_16_08c368d4-4d51-4da7-92fc-dac2437c8968_a3821b49-3931-4583-84da-ea5c85f343bd_bf591f93.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1709,6 +1722,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-fen-2',
+    fullQuestionImage: '/assets/aistudio/Soru_28_9abfb2bd-e776-42ac-bb08-7da9c11fa7af_c1d353c1-a4e3-4e28-963b-dc289405dc8a_067c0984.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1736,6 +1750,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-fen-3',
+    fullQuestionImage: '/assets/aistudio/Soru_78_ebde5c0b-ba0e-4a47-b54b-d63d08153d13_c3953e81-0ef3-492c-b35d-41323742b3e1_40872b01.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1763,6 +1778,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-fen-4',
+    fullQuestionImage: '/assets/aistudio/Soru_80_94131191-36e7-4f37-9190-e8e287915204_992e57aa-ccab-47eb-bccf-1d2cb8abf05a_1fd40993.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1792,6 +1808,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   // --- İNKILAP TARİHİ (3 Soru) ---
   {
     id: 'deneme1v2-ink-1',
+    fullQuestionImage: '/assets/aistudio/Soru_27_89b3fb70-8675-4481-b804-584749a6e636_f43f84cf-402d-4b91-859f-333ed5135eb8_8e6cd96f.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1818,6 +1835,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-ink-2',
+    fullQuestionImage: '/assets/aistudio/Soru_15_5f03c4d2-afbf-450b-9594-93780eef8962_6d05f6e2-695a-4ada-b009-3c392cfb6ae9_9b31781f.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
@@ -1844,6 +1862,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
   },
   {
     id: 'deneme1v2-ink-3',
+    fullQuestionImage: '/assets/aistudio/Soru_21_7728f43f-f836-4008-9029-7e215f2f4b2e_fd28bf6d-0fb3-4f4b-bc6d-c2790a1d0318_0fc80e84.png',
     institution: 'aydin',
     institutionName: 'Aydın Dershanesi',
     examId: 'aydin-nao-lgs-deneme-1-v2',
