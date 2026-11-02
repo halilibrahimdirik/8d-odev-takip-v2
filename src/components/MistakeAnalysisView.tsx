@@ -47,7 +47,7 @@ export const MistakeAnalysisView: React.FC<MistakeAnalysisViewProps> = ({
   onUpdateMistakeStatus,
   onDeleteMistake,
 }) => {
-  const [mainTab, setMainTab] = useState<'hub' | 'mistakes' | 'questions-deneme1v2' | 'questions-deneme3' | 'vocabulary'>('hub');
+  const [mainTab, setMainTab] = useState<'hub' | 'mistakes' | 'questions-deneme1v2' | 'questions-deneme2' | 'questions-deneme3' | 'vocabulary'>('hub');
   const [questionsSubject, setQuestionsSubject] = useState<SubjectType | 'ALL'>('ALL');
   const [selectedSubject, setSelectedSubject] = useState<SubjectType | 'ALL'>('ALL');
   const [englishSubTab, setEnglishSubTab] = useState<'mistakes' | 'vocabulary'>('mistakes');
@@ -235,6 +235,22 @@ export const MistakeAnalysisView: React.FC<MistakeAnalysisViewProps> = ({
         <button
           type="button"
           onClick={() => {
+            setMainTab('questions-deneme2');
+            setQuestionsSubject('ALL');
+          }}
+          className={`px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition cursor-pointer ${
+            mainTab === 'questions-deneme2'
+              ? 'bg-white dark:bg-gray-900 text-blue-600 dark:text-blue-400 shadow-xs ring-2 ring-blue-500/30'
+              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+          }`}
+        >
+          <Building2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+          <span>8.SINIF NAO LGS DENEME-2 (26)</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
             setMainTab('questions-deneme3');
             setQuestionsSubject('ALL');
           }}
@@ -336,7 +352,61 @@ export const MistakeAnalysisView: React.FC<MistakeAnalysisViewProps> = ({
               </div>
             </div>
 
-            {/* Card 2: 8.SINIF NAO LGS DENEME-3 */}
+            {/* Card 2: 8.SINIF NAO LGS DENEME-2 */}
+            <div className="rounded-2xl border border-blue-300 dark:border-blue-800 bg-linear-to-br from-blue-50/60 via-white to-blue-50/20 dark:from-blue-950/30 dark:via-gray-900 dark:to-gray-900 p-5 shadow-2xs hover:shadow-md transition flex flex-col justify-between gap-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg font-black shadow-xs shrink-0">
+                    📘
+                  </div>
+                  <div>
+                    <h4 className="text-base font-extrabold text-gray-900 dark:text-white leading-tight">
+                      8.SINIF NAO LGS DENEME-2
+                    </h4>
+                    <p className="text-xs text-blue-700 dark:text-blue-300 font-bold">
+                      Aydın Dershanesi · 26 Soru
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1.5 text-[11px] font-semibold text-gray-500 dark:text-gray-400 flex-wrap pt-1">
+                  <span className="px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200/60">
+                    📖 Tr (7)
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200/60">
+                    📐 Mat (3)
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60">
+                    🔬 Fen (5)
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 border border-rose-200/60">
+                    🏛️ İnk (5)
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200/60">
+                    🕌 Din (3)
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60">
+                    🇬🇧 İng (3)
+                  </span>
+                </div>
+              </div>
+
+              <div className="pt-2 border-t border-blue-100 dark:border-blue-900/40">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMainTab('questions-deneme2');
+                    setQuestionsSubject('ALL');
+                  }}
+                  className="w-full py-2.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-extrabold transition cursor-pointer flex items-center justify-center gap-2 shadow-xs"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>Deneme-2 (26) →</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Card 3: 8.SINIF NAO LGS DENEME-3 */}
             <div className="rounded-2xl border border-purple-300 dark:border-purple-800 bg-linear-to-br from-purple-50/60 via-white to-purple-50/20 dark:from-purple-950/30 dark:via-gray-900 dark:to-gray-900 p-5 shadow-2xs hover:shadow-md transition flex flex-col justify-between gap-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -490,6 +560,31 @@ export const MistakeAnalysisView: React.FC<MistakeAnalysisViewProps> = ({
             studentName={studentName}
             initialSubject={questionsSubject}
             initialExamId="aydin-nao-lgs-deneme-1-v2"
+          />
+        </div>
+      )}
+
+      {/* Main Tab: Deneme-2 Questions */}
+      {mainTab === 'questions-deneme2' && (
+        <div className="space-y-4">
+          <div className="flex items-center justify-between bg-blue-50 dark:bg-blue-950/40 p-3 rounded-xl border border-blue-200/80 dark:border-blue-800/60">
+            <button
+              type="button"
+              onClick={() => setMainTab('hub')}
+              className="px-3.5 py-1.5 rounded-lg bg-white dark:bg-gray-900 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-700 dark:text-blue-300 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer shadow-2xs border border-blue-200 dark:border-blue-800"
+            >
+              <span>⬅️ Geri Dön (Sınav Listesi)</span>
+            </button>
+            <span className="text-xs font-extrabold text-blue-900 dark:text-blue-200 flex items-center gap-2">
+              <span className="w-4 h-4 bg-blue-600 text-white rounded-xs inline-flex items-center justify-center text-[10px]">📘</span>
+              8.SINIF NAO LGS DENEME-2 (26 Soru)
+            </span>
+          </div>
+
+          <PracticeQuestionsView
+            studentName={studentName}
+            initialSubject={questionsSubject}
+            initialExamId="aydin-nao-lgs-deneme-2"
           />
         </div>
       )}
